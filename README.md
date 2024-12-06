@@ -12,7 +12,7 @@
 # CRAXZIP (V1)
 #### WORK IN PROGRESS
 
-A Python-based brute-force tool for ZIP file password cracking. This utility supports both PKZIP and AES-encrypted ZIP fileS.
+A Python-based brute-force tool for ZIP file password cracking. This utility supports both PKZIP and AES-encrypted ZIP files.
 
 ## Features
 
