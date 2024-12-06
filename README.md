@@ -40,13 +40,13 @@ python grpcrack.py <ZIP_FILE> <DICTIONARY_FILE>
    ```
 
 3. **Interrupt the Process**:
-   - Press `Ctrl+C` to stop the script gracefully.
+   - Press `Ctrl+C` to stop the script.
    - The script will display the number of passwords attempted before stopping.
 
 ## Requirements
 
 - Python 3.6+
-- `pyzipper` 
+- `pyzipper` library. 
 
 ## License
 
