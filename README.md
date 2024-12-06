@@ -20,22 +20,7 @@ A Python-based brute-force tool for ZIP file password cracking. This utility sup
 - Multi-threaded.
 - (Ctrl+C) to exit. 
 
-## Installation
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/your-username/grp-utility.git
-cd grp-utility
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run the Script
+### Basic Usage
 
 ```bash
 python grpcrack.py <ZIP_FILE> <DICTIONARY_FILE>
@@ -61,24 +46,7 @@ python grpcrack.py <ZIP_FILE> <DICTIONARY_FILE>
 ## Requirements
 
 - Python 3.6+
-- `pyzipper` (installed via `requirements.txt`)
-
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch for your feature/bugfix:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Description of your changes"
-   ```
-4. Push to your fork:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request on the main repository.
+- `pyzipper` 
 
 ## License
 
