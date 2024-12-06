@@ -1,4 +1,4 @@
-import pyzipper 
+import pyzipper  # For PKZIP encryption handling
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
@@ -15,7 +15,7 @@ ascii_banner = r"""
    \______  /____|_  /\____|__  /___/\  \/_______ \|___||____|    
           \/       \/         \/      \_/        \/           
 
-                          A GRP UTILITY
+                           A GRP UTILITY
 """
 
 # Global counter for passwords attempted
@@ -47,6 +47,8 @@ def extract_file(zname, password):
                 print(f'\n[+] Found password: {password}\n')
                 os._exit(0)  # Exit immediately once the password is found
     except (RuntimeError, pyzipper.BadZipFile):
+        pass  # Invalid password or corrupted file
+    finally:
         with password_lock:
             password_attempts += 1
 
@@ -69,9 +71,14 @@ def main(zname, dname, max_threads=10):
     # Read dictionary file efficiently
     try:
         with open(dname, 'r', encoding='utf-8', errors='ignore') as pass_file:
-            passwords = [line.strip() for line in pass_file]
+            passwords = [line.strip() for line in pass_file if line.strip()]
     except FileNotFoundError:
         print(f"[-] Dictionary file '{dname}' not found.")
+        return
+
+    # Ensure passwords were loaded
+    if not passwords:
+        print("[-] No passwords found in the dictionary file.")
         return
 
     total_passwords = len(passwords)
