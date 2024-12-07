@@ -1,3 +1,7 @@
+# Various Scripts
+
+## CRAXZIP
+
 ```
    ___________________    _____  ____  _____________._____________
   \_   ___ \______   \  /  _  \ \   \/  /\____    /|   \______   \
@@ -6,10 +10,9 @@
    \______  /____|_  /\____|__  /___/\  \/_______ \|___||____|    
           \/       \/         \/      \_/        \/            
 
-                          A GRP UTILITY
+                        
 ```
 
-# CRAXZIP (V1)
 #### WORK IN PROGRESS
 
 A Python-based brute-force tool for ZIP file password cracking. This utility supports both PKZIP and AES-encrypted ZIP files.
